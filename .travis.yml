@@ -9,14 +9,14 @@ script:
   - docker run -e CI=true oluwandy/react-test npm run test
 
 after_success:
-  - docker build -t oluwandy/multi-client ./client
-  - docker build -t oluwandy/multi-nginx ./nginx
-  - docker build -t oluwandy/multi-server ./server
-  - docker build -t oluwandy/multi-worker ./worker
+  - docker build -t toks122/multi-client ./client
+  - docker build -t toks122/multi-nginx ./nginx
+  - docker build -t toks122/multi-server ./server
+  - docker build -t v/multi-worker ./worker
 #docker login
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push image created to docker hub
-  - docker push oluwandy/multi-client
-  - docker push oluwandy/multi-nginx
-  - docker push oluwandy/multi-server
-  - docker push oluwandy/multi-worker
+  - docker push toks122/multi-client
+  - docker push toks122/multi-nginx
+  - docker push toks122/multi-server
+  - docker push toks122/multi-worker
