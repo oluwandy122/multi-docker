@@ -12,7 +12,7 @@ after_success:
   - docker build -t toks122/multi-client ./client
   - docker build -t toks122/multi-nginx ./nginx
   - docker build -t toks122/multi-server ./server
-  - docker build -t v/multi-worker ./worker
+  - docker build -t toks122/multi-worker ./worker
 #docker login
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # push image created to docker hub
