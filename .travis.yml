@@ -21,6 +21,7 @@ after_success:
   - docker push toks122/multi-server
   - docker push toks122/multi-worker
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
