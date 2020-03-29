@@ -20,6 +20,8 @@ after_success:
   - docker push toks122/multi-nginx
   - docker push toks122/multi-server
   - docker push toks122/multi-worker
+#deploy
+
 deploy:
   edge: true
   provider: elasticbeanstalk
